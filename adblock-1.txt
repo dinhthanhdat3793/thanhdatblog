@@ -1,0 +1,41 @@
+! function() {
+    function f() {
+        var a = document.createElement("div");
+        a.id = "levelmaxblock";
+        a.innerHTML = '<div class="inner"><div class="header"><h2 style="color:#fff;">Đã phát hiện Ad Blocker</h2></div><p>Vui lòng tắt trình chặn quảng cáo của bạn để tiếp tục!</p><div class="tombol"><button class="1 active">Adblock</button><button class="2">Adblock Plus</button></div><div class="caranya"><div class="1 active"><ol><li>Click on the AdBlock icon in your browser.<br/>Nhấp vào biểu tượng AdBlock trong trình duyệt của bạn.<br/><img src="https://1.bp.blogspot.com/-2JtR5VhyiPE/YYOia-3Sd9I/AAAAAAAAKCE/jMio2zMQ0_ASgPqv3eJ39byVCCWdlhPaACLcBGAsYHQ/s221/TechZezo-img.png" alt="Adblock" width="250px"/></li><li>Choose, Don\'t run on pages on this domain.<br/>Chọn "Always".<br/><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhKPv0tBPbgTjTQQU9Dp6Dpxqwr_elMslZrUVnCSIqeeAgBakAYG38w11NInpeyihoC5y8dnjTcKGXSJJnc6tNsfr6smEst3_699Lee3Mk3q-IPeUzxohaW_zy6PdH6TsxDY2TtlXj3v23s1J8JWTQQM5ClNffwZB-cCjQ7WUkFMqQCXdcRh2SsaVKQ" alt="Adblock" width="300px"/></li>
+       <li>Refresh the page if it didn't refresh automatically. Thanks!<br/>Làm mới trang nếu nó không tự động làm mới. Cảm ơn bạn rất nhiều!</li>
+          </ol></div>
+          
+          <div class="2"><ol><li>Click on the AdBlock Plus icon in your browser.<br/>Nhấp vào biểu tượng AdBlock Plus trong trình duyệt của bạn.<br/><img src="https://1.bp.blogspot.com/-2JtR5VhyiPE/YYOia-3Sd9I/AAAAAAAAKCE/jMio2zMQ0_ASgPqv3eJ39byVCCWdlhPaACLcBGAsYHQ/s221/TechZezo-img.png" alt="Adblock" width="250px"></li><li>Click the "This Website" button.<br/>Nhấp vào nút "Trang web này".<br/><img src="https://blogger.googleusercontent.com/img/a/AVvXsEiKijCdsY-Otcj2cCJFuaE8OrFS4e-RSygMOcIcX77LU9Tp342sB1nt7sxZ5SuTRz74QF9--nKkDRoLC9MVrdP_lUbaF72i2m6XYdOiYFQLTDg78QHa_KeysPybbOrDB9OYGPMZa-1P33yA7NEckOJtNKCIP0sHquahLu0jrIeDT91Xq_G0fpuqBE39" alt="Adblock" width="300px"></li>
+<li>Refresh the page if it didn't refresh automatically. Thanks!<br/>Làm mới trang nếu nó không tự động làm mới. Cảm ơn bạn rất nhiều!</li>
+  
+  </ol></div></div></div>';
+
+        document.body.append(a);
+        document.body.style.overflow = "hidden";
+        var b = a.querySelectorAll("button");
+        a.querySelector(".close");
+        var d = a.querySelectorAll(".caranya > div");
+        for (a = 0; a < b.length; a++) b[a].addEventListener("click", function(a) {
+            a.preventDefault();
+            a = this.getAttribute("class").split(" ")[0];
+            for (var c = 0; c < d.length; c++) d[c].classList.remove("active"), b[c].classList.remove("active");
+            b[a - 1].classList.add("active");
+            d[a - 1].classList.add("active")
+        })
+    }
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+
+    b.async = !0;
+    b.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    b.onerror = function() {
+        f();
+        window.adblock = !0
+    };
+    var e = document.getElementsByTagName("script")[0];
+    e.parentNode.insertBefore(b, e)
+}();
+          
+          
+          
